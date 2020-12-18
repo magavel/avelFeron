@@ -1,0 +1,7 @@
+<div *ngIf="article$ ">
+  <ul>
+    <li *ngFor="let article of article$  | async ">
+      {{ article.title }}
+    </li>
+  </ul>
+</div>
