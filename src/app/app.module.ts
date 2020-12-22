@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar'; 
 import { MatIconModule } from '@angular/material/icon'; 
 import { MatButtonModule } from '@angular/material/button'; 
+import { MatCardModule } from '@angular/material/card'; 
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -18,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
+    MatCardModule,
     HttpClientModule
   ],
   providers: [],

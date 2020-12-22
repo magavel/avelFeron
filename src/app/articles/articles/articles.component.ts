@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ArticlesService } from 'src/app/services/articles.service';
+import { ArticleService } from 'src/app/services/article.service';
 
 @Component({
   selector: 'app-articles',
@@ -9,9 +9,13 @@ import { ArticlesService } from 'src/app/services/articles.service';
 export class ArticlesComponent implements OnInit {
   article$ = null;
 
-  constructor(private readonly articlesService: ArticlesService) {}
+  constructor(private readonly articlesService: ArticleService) {}
 
   ngOnInit(): void {
-    this.article$ = this.articlesService.getArticles()
+    this.article$ = this.articlesService.getArticles();
+  }
+
+  reloadArticles(deletionSuccess): void {
+    this.article$ = this.articlesService.getArticles();
   }
 }
